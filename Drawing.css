@@ -1,0 +1,65 @@
+#boxes {
+    position: absolute;
+    top: 0;
+}
+
+.metricGroup {
+    display: flex;
+    position: absolute;
+    top: -32px;
+    gap: 3px;
+    justify-self: anchor-center;
+}
+
+canvas {
+    display: block;
+    max-width: 960px;
+    aspect-ratio: 640/480;
+}
+
+.box {
+    position: absolute;
+    border: 4px solid;
+    border-radius: 6px;
+    padding: 2px;
+    transition: all 0s ease;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid black;
+    transform: translate(-50%, -50%);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.no-animation {
+    animation: none !important;
+}
